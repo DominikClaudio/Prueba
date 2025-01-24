@@ -200,7 +200,7 @@ h3 {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-image: url('Img/fondocumple2.jpg'); /* Cambia esto por la ruta de tu imagen */
+    background-image: url('fondocumple2.jpg'); /* Cambia esto por la ruta de tu imagen */
     background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
