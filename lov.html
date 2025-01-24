@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Site Web </title>
     <link rel="stylesheet" href="lov.css">
 </head>
 <body>
-    <div class="card-container">
-        <div class="envelope" id="envelope">
-            <div class="flap"></div>
-            <div class="paper" id="paper">
-                <p class="message">Te Amo ▼</p>
+    <div class="container">
+        <img src="Img/imgcontra.jpg" alt="Cumpleaños" class="birthday-image">
+        <div class="keypad">
+            <input type="password" id="password" maxlength="4" disabled placeholder="fecha">
+            <div class="buttons">
+                <!-- Generar botones del 1 al 9 -->
+                <button onclick="addDigit(1)">1</button>
+                <button onclick="addDigit(2)">2</button>
+                <button onclick="addDigit(3)">3</button>
+                <button onclick="addDigit(4)">4</button>
+                <button onclick="addDigit(5)">5</button>
+                <button onclick="addDigit(6)">6</button>
+                <button onclick="addDigit(7)">7</button>
+                <button onclick="addDigit(8)">8</button>
+                <button onclick="addDigit(9)">9</button>
+                <button onclick="clearPassword()">C</button>
+                <button onclick="addDigit(0)">0</button>
+                <button onclick="checkPassword()">✔</button>
             </div>
         </div>
     </div>

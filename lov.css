@@ -5,8 +5,71 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: #f2f2f2;
+    background-color: #f0f8ff;
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.birthday-image {
+    width: 300px; /* Ancho fijo */
+    height: 300px; /* Alto fijo igual al ancho */
+    object-fit: cover; /* Ajusta la imagen para encajar dentro del cuadrado */
+    border-radius: 15px; /* Bordes redondeados */
+    border: 2px solid #ccc; /* Borde decorativo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra */
+    animation: float 3s ease-in-out infinite; /* Animación continua */
+}
+
+/* Definición de la animación */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial y final */
+    }
+    50% {
+        transform: translateY(-10px); /* Movimiento hacia arriba */
+    }
+}
+
+.keypad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#password {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 150px;
+    padding: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #767ddaf5;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4231a0;
+}
+
+/*pagina 2 */
 
 .card-container {
     position: relative;
@@ -71,4 +134,263 @@ body {
 .envelope.open .paper {
     transform: translateY(0);
     opacity: 1;
+}
+
+/*H3*/
+
+h3 {
+    font-family: 'Playfair Display', serif; /* Fuente refinada y elegante */
+    font-size: 1.8rem; /* Tamaño moderado */
+    font-weight: 300; /* Letra delgada */
+    color: #555; /* Color gris suave */
+    text-align: center; /* Centrado */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra muy ligera */
+    border-bottom: 2px solid #ddd; /* Línea decorativa inferior */
+    padding-bottom: 10px; /* Espaciado para la línea */animation: fadeIn 2s ease-in-out infinite alternate; /* Animación suave */
+}
+
+/* Animación de parpadeo suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/*button*/
+
+#button-container {
+    margin-top: 25%;
+    margin-left: 32%;
+    text-align: center;
+}
+
+#continue-button {
+    display: none; /* Inicialmente oculto */
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    background-color: #ff0000; /* Color verde del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgb(255, 0, 0); /* Sombra roja brillante */
+}
+
+#continue-button:hover {
+    background-color: #df0d0d; /* Cambia el color del fondo al pasar el mouse */
+    box-shadow: 0 0 20px rgb(196, 24, 24); /* Aumenta la intensidad del brillo rojo */
+}
+
+/*pagina 3*/
+
+
+.pag3fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: url('Img/fondocumple2.jpg'); /* Cambia esto por la ruta de tu imagen */
+    background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden; /* Evita que la imagen se repita */
+}
+
+.globo-container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%; /* Tamaño del área donde estarán los globos */
+    height: 80%;
+}
+
+.globo {
+    width: 120px;
+    height: 160px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+.globo-container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%; /* Tamaño del área donde estarán los globos */
+    height: 80%;
+}
+
+.globo {
+    width: 120px;
+    height: 160px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    animation: crecer 3s ease-in-out infinite;
+    transition: background-color 0.3s ease;
+}
+
+/* Animación para que los globos crezcan */
+@keyframes crecer {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Aplicar retrasos diferentes a cada globo */
+.globo-1 {
+    background-color: #ff6e61ab;
+    animation-delay: 0s;
+}
+.globo-2 {
+    background-color: #4caf4f9c;
+    animation-delay: 1s;
+}
+.globo-3 {
+    background-color: #2195f39d;
+    animation-delay: 2s;
+}
+.globo-4 {
+    background-color: #ffeb3b94;
+    animation-delay: 3s;
+}
+.globo-5 {
+    background-color: #9b27b08e;
+    animation-delay: 4s;
+}
+.globo-6 {
+    background-color: #ff9900a4;
+    animation-delay: 5s;
+}
+.globo-7 {
+    background-color: #683ab791;
+    animation-delay: 6s;
+}
+.globo-8 {
+    background-color: #00bbd48f;
+    animation-delay: 7s;
+}
+
+/* Estado cuando el globo es clicado */
+.globo.clicked {
+    animation: none; /* Detener la animación */
+    background-color: white; /* Cambiar a blanco */
+}
+
+.palito {
+    width: 4px;
+    height: 90px;
+    background-color: #4a4a4a;
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.texto {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px; /* Tamaño ligeramente mayor para elegancia */
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-weight: 300; /* Fuente delgada */
+    color: #333; /* Color gris oscuro para un contraste suave */
+    text-align: center;
+    padding: 10px;
+    background-color: transparent; /* Fondo blanco semitransparente */
+    border-radius: 8px; /* Bordes más suaves */
+    transition: all 0.3s ease; /* Transición suave para efectos */
+}
+
+.globo.clicked .texto {
+    display: block;
+}
+
+/*pagina 4*/
+
+.pag4fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.heart-container {
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+
+.progress-message {
+    font-family: 'Playfair Display', serif; /* Fuente refinada y elegante */
+    font-size: 1.8rem; /* Tamaño moderado */
+    font-weight: 300; /* Letra delgada */
+    color: #555; /* Color gris suave */
+    text-align: center; /* Centrado */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin-top: -105px;
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra muy ligera */
+    border-bottom: 2px solid #ddd; /* Línea decorativa inferior */
+}
+
+.heart-outline {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: transparent;
+    border: 3px solid red;
+    clip-path: polygon(
+    50% 100%, 85% 70%, 100% 40%, 75% 0%, 
+    50% 15%, 25% 0%, 0% 40%, 15% 70%
+);
+    overflow: hidden;
+}
+
+.heart-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* Comienza vacío */
+    background-color: red;
+    transition: height 0.3s ease;
 }
