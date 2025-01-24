@@ -55,8 +55,34 @@ envelope.addEventListener("click", () => {
 
 /** pagina 3 */
 function toggleText(globo) {
-    globo.classList.toggle('clicked');
+    // Marcar el globo como clicado
+    globo.classList.add('clicked');
+
+    // Verificar si todos los globos han sido clicados
+    const allGlobos = document.querySelectorAll('.globo');
+    const clickedGlobos = document.querySelectorAll('.globo.clicked');
+
+    if (allGlobos.length === clickedGlobos.length) {
+        resetGlobos(); // Restaurar colores y animaciones
+        showFinalMessage(); // Mostrar el mensaje final
+    }
 }
+
+function resetGlobos() {
+    const allGlobos = document.querySelectorAll('.globo');
+    allGlobos.forEach((globo) => {
+        globo.classList.remove('clicked'); // Eliminar la clase clicked
+        globo.style.backgroundColor = ''; // Restaurar el color original
+        globo.style.animation = ''; // Reactivar la animación
+    });
+}
+
+function showFinalMessage() {
+    const finalMessage = document.getElementById('final-message');
+    finalMessage.classList.add('show');
+}
+
+
 
 /*pagina4*/ 
 
